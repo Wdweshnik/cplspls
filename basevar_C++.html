@@ -1,0 +1,1008 @@
+<!DocType HTML>
+
+<html>
+
+<!-- Часть "голова"-->
+
+<head>
+	<meta charset = "Utf-8">
+	<link rel="stylesheet" type = "text/css" href = "CssCods.css"/>
+	<link rel = "shortcut icon" type="image" href = "Res\Icon_head.png">
+	<title> C pls+ pls+.ru </title>
+</head>
+
+<body>
+	
+	<Up>
+	<div class = "up">
+		<upLogo>
+		<div class = "up_logo">
+			
+			<a href = index.html>
+				<img src = Res\Icon_C++.png class = "logos">
+			</a>
+			
+			<a href = index.html>
+				<img src = Res\CPls+Pls+.png class = "name">
+			</a>
+			
+		</div>
+		</upLogo>
+		
+		<upMenu>
+		<div class = "up_menu">
+			
+			<ul>
+				<li> <a class = "gmt1" href = index.html > Главная </a> </li>
+				<li> <a class = "gmt2" href = Site_historycpp.html> О языке С++ </a>
+					<ul>
+						<li> <a class = "mt" href = Site_historycpp.html > История языка С++ </a> </li>
+						<li> <a class = "mt" href = C++_update.html> Обновления C++ </a> </li>
+						<li> <a class = "mt" href = index.html > Где используется С++ </a> </li>
+						<li> <a class = "mt" href = index.html > Языки на основе С++ </a> </li>
+					</ul>
+				</li>
+				<li> <a class = "gmt3" href = base_C++.html> Базовый C++ </a>
+					<ul>
+						<li> <a class = "mt" href = base_C++.html > Базовый синтаксис </a> </li>
+						<li> <a class = "mt" href = basevar_C++.html > Задачи к базе </a> </li>
+						<li> <a class = "mt" href = index.html > Работа с массивами </a> </li>
+						<li> <a class = "mt" href = index.html > Задачи к массивами</a> </li>
+						<li> <a class = "mt" href = index.html > Работа с библиотеками </a> </li>
+						<li> <a class = "mt" href = index.html > Общие задачи </a> </li>
+					</ul>
+				</li>
+				<li> <a class = "gmt4" href = index.html > Вопрос/ответ </a> </li>
+				<li> <a class = "gmt5" href = Site_contacts.html > о Нас </a> </li>
+			</ul>
+			
+		</div>
+		</upMenu>
+	</div>
+	</Up>
+	
+	<Centre>
+		<div class = "centre_5">
+		
+			<h1>Задачи на базовые знания</h1>
+			<div class = "zad1">
+			<h2> Задача 1: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Вывести содержимое массива на экран.</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i;
+	cout &#60;&#60; "Введите кол-во элементов в массиве: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout 	&#60;&#60; "Введите элемент a[" &#60;&#60; i &#60;&#60; "]=";
+		cin >> a[i];
+	}
+	for(i=0;i&#60;N;i++)
+	{
+	  	cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	return 0;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 2: </h2>
+			<p>Написать программу, которая выводит таблицу перевода расстояний в дюймах в сантиметры для значений от n до m дюймов (1 дюйм = 2,54 см)
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int n,m;
+	cout &#60;&#60; "От:";
+	cin >> n;
+	cout &#60;&#60; "До:";
+	cin >> m;
+	for(n;n&#60;m;n++)
+	{
+		cout &#60;&#60; n &#60;&#60; " Дюйм=" &#60;&#60; n*2.54 &#60;&#60; "см" &#60;&#60; endl;
+	}
+	return 0;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 3: </h2>
+			<p>Начав тренировки, спортсмен в первый день пробежал М км. Каждый день он увеличивал дневную норму на Р% нормы предыдущего дня. В какой день впервые спортсмен пробежит более K км?
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+ 
+int main(int argc, char *argv[])
+{
+	float M,bM,P,K,i=0;
+	cout &#60;&#60; "Введи M: ";
+	cin >> M;
+	cout &#60;&#60; "Введи % увеличение: ";
+	cin >> P;
+	cout &#60;&#60; "Введи K км: ";
+	cin >> K;
+	bM = M;
+	while(K > M)
+	{
+		M = M+(bM/100*P);
+		bM = M;
+		i++;
+	}
+ 
+	cout &#60;&#60; "В &#60;&#60; i &#60;&#60; " день, более " &#60;&#60; K &#60;&#60; " км" &#60;&#60; endl;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 4: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Вывести содержимое массива на экран. Вывести на экран среднее арифметическое элементов массива.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i,Sym=0;
+	cout &#60;&#60; "Введи кол-во элементов: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "Ввод a[" &#60;&#60; i &#60;&#60; "] элемента: ";
+		cin >> a[i];
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		Sym += a[i];
+	}
+	cout &#60;&#60; "Среднее арифметическое=" &#60;&#60; Sym/N &#60;&#60; endl;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 5: </h2>
+			<p>Написать программу, которая выводит таблицу умножения числа N в интервале от L до K. Ввод N, L,K выполнять с клавиатуры.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,Nb,L,K,i,F;
+	cout &#60;&#60; "Введите N,L,K" &#60;&#60; endl;
+	cin >> N >> L >> K;
+	for(i=L;i&#60;K;i++)
+	{
+		cout &#60;&#60; N &#60;&#60; "*" &#60;&#60; i &#60;&#60; "=" &#60;&#60; N*i &#60;&#60; endl;
+	}
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 6: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Вывести содержимое массива на экран. Вывести на экран все элементы массива большее заданного числа К.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i,K;
+	cout &#60;&#60; "Введите кол-во элементов: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "Введ a[" &#60;&#60; i &#60;&#60; "] элемента: ";
+		cin >> a[i];
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	cout &#60;&#60; "Вывести числа более: ";
+	cin >> K;
+	for(i=0;i&#60;N;i++)
+	{
+		if(a[i] > a[i+1])
+		{
+			cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+		}
+	}
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 7: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Вывести содержимое массива на экран. найти и вывести на экран сумму всех четных элементов массива.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i;
+	cout &#60;&#60; "Введите кол-во элементов: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "Ввод a[" &#60;&#60; i &#60;&#60; "] элементов: ";
+		cin >> a[i];
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	cout &#60;&#60; "Чётные:" &#60;&#60; endl;
+	for(i=0;i&#60;N;i++)
+	{
+		if((a[i]%2) == 0)
+		{
+			cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+		}
+	}
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 8: </h2>
+			<p>Клиент оформил вклад на m тысяч рублей в банке под k% годовых. Через сколько лет сумма вклада превысит s тысяч рублей, если за это время клиент не будет брать деньги со счета.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int m,k,s,Y=1;
+	cout &#60;&#60; "Введи m тысяч: ";
+	cin >> m;
+	cout &#60;&#60; "Введи k%: ";
+	cin >> k;
+	cout &#60;&#60; "Введи s тысяч: ";
+	cin >> s;
+	m *= 1000;
+	s *= 1000;
+	while(s > m)
+	{
+		m += (m / 100) * k;
+		Y++;
+	}
+	cout &#60;&#60; "через " &#60;&#60; Y &#60;&#60; endl;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 9: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Вывести содержимое массива на экран. Найти наибольший элемент массива.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i,j,Max;
+	cout &#60;&#60; "Введи кол-во элементов: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "Ввод a[" &#60;&#60; i &#60;&#60; "] элемента: ";
+		cin >> a[i];
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	Max = a[0];
+	for(i=1;i&#60;N;i++)
+	{
+		if(Max &#60; a[i]) Max = a[i];
+	}
+	cout &#60;&#60; "наибольший элемент = " &#60;&#60; Max &#60;&#60; endl;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 10: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Ввести число L. Все элементы массива больше L заменить на число 5. Вывести на экран элементы введенного массива и полученного.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i,j,L;
+	cout &#60;&#60; "Введи кол-во элементов: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "Ввод a[" &#60;&#60; i &#60;&#60; "] элемента: ";
+		cin >> a[i];
+	}
+	cout &#60;&#60; "Введи L: ";
+	cin >> L;
+ 
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	cout &#60;&#60; endl;
+	for(i=0;i&#60;N;i++)
+	{
+		if(a[i] > L) a[i] = 5;
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 11: </h2>
+			<p>Бизнесмен взял ссуду m тысяч рублей в банке под k% годовых. Рассчитать его долг через N лет , если за это время он не будет отдавать долг?
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int m,k,N,i;
+	cout &#60;&#60; "Введи m тысяч: ";
+	cin >> m;
+	cout &#60;&#60; "Введи k%: ";
+	cin >> k;
+	cout &#60;&#60; "Введи N let: ";
+	cin >> N;
+	m *= 1000;
+	for(i=0;i&#60;N;i++)
+	{
+		m += (m / 100) * k;
+	}
+	cout &#60;&#60; "\n" &#60;&#60; m &#60;&#60; endl;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+	
+		
+		<div class = "zad1">
+			<h2> Задача 12: </h2>
+			<p>Написать программу, которая создает одномерный массив из N целых чисел. Количество чисел в массиве и сами числа вводятся с клавиатуры. Вывести содержимое массива на экран. Найти сумму элементов массива кратных 3.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int N,i,j;
+	cout &#60;&#60; "Введи кол-во элементов: ";
+	cin >> N;
+	int a[N];
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "Ввод a[" &#60;&#60; i &#60;&#60; "] элемента: ";
+		cin >> a[i];
+	}
+	for(i=0;i&#60;N;i++)
+	{
+		cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+	}
+	cout &#60;&#60; "Кратные 3-м" &#60;&#60; endl;
+	for(i=0;i&#60;N;i++)
+	{
+		if((a[i]%3) == 0)
+		{
+			cout &#60;&#60; "a[" &#60;&#60; i &#60;&#60; "]=" &#60;&#60; a[i] &#60;&#60; endl;
+		}
+	}
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 13: </h2>
+			<p>по введенному номеру дня недели вывести его название, используя оператор множественного выбора. Нумерация дней недели начинается с 1 – понедельник, 2 — вторник и т. д.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	int choise; // переменная выбора пользователем дня недели
+     vector &#60;string> a (7)  ;
+     a[0] = "Понедельник ";
+     a[1] = "Вторник ";
+     a[2] = "Среда ";
+     a[3] = "Четверг "; 
+     a[4] = "Пятница ";
+     a[5] = "Суббота ";    
+     a[6] = "Воскресенье ";
+ 
+ 
+    for (int i = 0; i &#60;a.size(); i++ ) //вывод на печать дней недели
+                cout &#60;&#60; i + 1 &#60;&#60; ". " &#60;&#60;  a[i] &#60;&#60; "\n";
+             
+     
+    cout &#60;&#60; "\nВыберите номер дня недели - "; // ввод пользователем
+    cin >> choise;
+    cout &#60;&#60; endl;
+ 
+ 
+ 
+switch (choise)
+    {
+        case 1:{
+            cout  &#60;&#60;  a[0] &#60;&#60; "\n";
+             break;
+             }
+ 
+        case 2:{
+            cout  &#60;&#60;  a[1] &#60;&#60; "\n";
+             break;
+             }
+                     
+        case 3:{
+            cout  &#60;&#60;  a[2] &#60;&#60; "\n";
+             break;
+             }
+ 
+        case 4:{
+            cout  &#60;&#60;  a[3] &#60;&#60; "\n";
+             break;
+             }
+ 
+        case 5:{
+            cout  &#60;&#60;  a[4] &#60;&#60; "\n";
+             break;
+             }
+                     
+        case 6:{
+            cout  &#60;&#60;  a[5] &#60;&#60; "\n";
+             break;
+             }
+         
+        case 7:{
+            cout  &#60;&#60;  a[6] &#60;&#60; "\n";
+             break;
+             }
+ 
+        default:{
+            cout &#60;&#60; "Вы ввели некорректный знак \n";
+             
+                }
+}
+ 
+    cout &#60;&#60; endl &#60;&#60; endl;
+ 
+return 0;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 14: </h2>
+			<p>Дан одномерный массив, длину массива задаёт пользователь. Вычислить сумму квадратов тех чисел, модуль которых превышает значение 2,5.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+#include &#60;cmath>
+#include &#60;vector>
+#include &#60;ctime>
+using namespace std;
+ 
+ 
+void print(vector &#60;double> vd_arrage1, double d_summ1); //фунция вывода на печать
+ 
+int main()
+{
+    setlocale (LC_ALL, "rus");
+    srand(time(NULL));
+ 
+    double d_size,//размер массива. вводится пользователем
+           d_number,//генерируемая переменная
+           d_summ(0); //сумма
+    vector&#60;double> vd_arrage;//массив в который заносятся квадраты чисел
+ 
+ 
+    cout &#60;&#60; "\tВведите количество членов массива ";
+    cin >> d_size;
+    cout &#60;&#60; endl;
+ 
+    cout &#60;&#60; "\tСгенерированная последовательность \n";
+ 
+    for (int i = 0; i &#60; d_size; i++){
+         
+        d_number = (-50 + rand () % 100) / 10.0;// генератор дробных чисел в диапазоне  от - 5 до 5
+ 
+        cout &#60;&#60; " " &#60;&#60; d_number &#60;&#60;  " |"; //вывод на экран последовательности сгенерированных чисел
+ 
+            if (fabs (d_number) > 2.5){ // если модуль числа больше 2.5
+                 
+                d_number *= d_number; // вычисление квадрата
+                 
+                vd_arrage.push_back (d_number);// добавление в массив
+                 
+                d_summ += d_number;
+            }
+ 
+    }
+     
+    cout &#60;&#60; endl;
+ 
+    print( vd_arrage,d_summ); // вывод на печать
+ 
+return 0;
+}
+void print(vector &#60;double> vd_arrage1, double d_summ1)
+{
+        cout &#60;&#60; "\tМассив квадратов чисел, модуль которых превышает значение 2,5 \n";
+ 
+    for (int i = 0; i &#60; vd_arrage1.size(); i++)
+        cout &#60;&#60; " " &#60;&#60; vd_arrage1[i] &#60;&#60;  " |";
+ 
+    cout &#60;&#60; endl;
+         
+    cout &#60;&#60; "\tСумма квадратов чисел, модуль которых превышает значение 2,5   = " &#60;&#60; d_summ1;
+ 
+    cout &#60;&#60; endl;
+ 
+ 
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 15: </h2>
+			<p>Напишите программу, которая должна определить, пройдет ли кирпич в отверстие. Размеры отверстия (длина и высота) вводит пользователь. Тоже самое касается габаритов кирпича, пользователь вводит в программу значения длины, ширины и высоты кирпича.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	double dLB, dWB, dHB;   //длинна, ширина, высота кирпича
+    double dW, dH;          //ширина, высота отверстия
+ 
+    cout &#60;&#60; "\t\tПройдёт кирпич или нет???" &#60;&#60; endl;
+        
+    cout &#60;&#60; "Введите длинну кирпича: ";
+    cin >> dLB;
+    cout &#60;&#60; "Введите ширину кирпича: ";
+    cin >> dWB;
+    cout &#60;&#60; "Введите высоту кирпича: ";
+    cin >> dHB;
+ 
+    cout &#60;&#60; "Введите ширина отверстия: ";
+    cin >> dW;
+    cout &#60;&#60; "Введите высоту отверстия: ";
+    cin >> dH;
+ 
+    if(dWB &#60;= dW && dHB &#60;= dH)
+    { 
+        cout &#60;&#60; "Кирпич войдёт в отверстие 1-й стороной" &#60;&#60; endl;
+    } else if(dLB &#60;= dW && dHB &#60;= dH)
+        { 
+            cout &#60;&#60; "Кирпич войдёт в отверстие 2-й стороной" &#60;&#60; endl;
+        } else if(dLB &#60;= dW && dWB &#60;= dH )
+            { 
+                cout &#60;&#60; "Кирпич войдёт в отверстие 3-й стороной" &#60;&#60; endl;
+            } else
+                { 
+                    cout &#60;&#60; "Кирпич не войдёт" &#60;&#60; endl;
+                } 
+                    
+    return 0;
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 16: </h2>
+			<p>С помощью цикла while разработать программу, которая будет вычислять сумму чисел нацело делящихся на 5. Цикл задать от 0 до введенного с клавиатуры числа.
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+using namespace std;
+
+int main() 
+{
+	int min_number = 0, max_number, sum = 0;
+	cout &#60;&#60; «Input value for max number of sequence: «;
+	cin >> max_number;
+	while (min_number &#60;= max_number)
+	{
+		if (min_number % 5 == 0)
+		{
+			sum += min_number;
+		}
+		min_number++;
+	}
+	cout &#60;&#60; «The sum of the numbers is divisible by 5 = » &#60;&#60; sum;
+	return 0;
+	}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 17: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 18: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div class = "zad1">
+			<h2> Задача 19: </h2>
+			<p>
+			</p>
+				<ul>
+					<li> <a> Решение: </a>
+						<ul>
+							<li> <pre> 
+#include &#60;iostream>
+ 
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	setlocale(LC_ALL, "RU");
+	
+}
+							</pre> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<h1>Идёт заполнение сайта</h1>
+		</div>
+	</Centr>
+	
+	<Buttom>
+	<div class = "buttom">
+		<p>
+			&copy; 2023 Фурманов И.Д.
+		</p>
+	</div>
+	</Buttom>
+	
+</body>
+
+</html>

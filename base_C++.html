@@ -1,0 +1,190 @@
+<!DocType HTML>
+
+<html>
+
+<!-- Часть "голова"-->
+
+<head>
+	<meta charset = "Utf-8">
+	<link rel="stylesheet" type = "text/css" href = "CssCods.css"/>
+	<link rel = "shortcut icon" type="image" href = "Res\Icon_head.png">
+	<title> C pls+ pls+.ru </title>
+</head>
+
+<body>
+	
+	<Up>
+	<div class = "up">
+		<upLogo>
+		<div class = "up_logo">
+			
+			<a href = index.html>
+				<img src = Res\Icon_C++.png class = "logos">
+			</a>
+			
+			<a href = index.html>
+				<img src = Res\CPls+Pls+.png class = "name">
+			</a>
+			
+		</div>
+		</upLogo>
+		
+		<upMenu>
+		<div class = "up_menu">
+			
+			<ul>
+				<li> <a class = "gmt1" href = index.html > Главная </a> </li>
+				<li> <a class = "gmt2" href = Site_historycpp.html> О языке С++ </a>
+					<ul>
+						<li> <a class = "mt" href = Site_historycpp.html > История языка С++ </a> </li>
+						<li> <a class = "mt" href = C++_update.html> Обновления C++ </a> </li>
+						<li> <a class = "mt" href = index.html > Где используется С++ </a> </li>
+						<li> <a class = "mt" href = index.html > Языки на основе С++ </a> </li>
+					</ul>
+				</li>
+				<li> <a class = "gmt3" href = base_C++.html> Базовый C++ </a>
+					<ul>
+						<li> <a class = "mt" href = base_C++.html > Базовый синтаксис </a> </li>
+						<li> <a class = "mt" href = basevar_C++.html > Задачи к базе </a> </li>
+						<li> <a class = "mt" href = index.html > Работа с массивами </a> </li>
+						<li> <a class = "mt" href = index.html > Задачи к массивами</a> </li>
+						<li> <a class = "mt" href = index.html > Работа с библиотеками </a> </li>
+						<li> <a class = "mt" href = index.html > Общие задачи </a> </li>
+					</ul>
+				</li>
+				<li> <a class = "gmt4" href = index.html > Вопрос/ответ </a> </li>
+				<li> <a class = "gmt5" href = Site_contacts.html > о Нас </a> </li>
+			</ul>
+			
+		</div>
+		</upMenu>
+	</div>
+	</Up>
+	
+	<Centre>
+		<div class = "centre_4">
+		
+		<div class = "BFT">
+		
+			<h1>Начальный синтаксис:</h1>
+			<h2 class = "incl">#include</h2>
+			<p> - этот элемент "подгружает" библиотеки к файлу, в котоором он вписан, вот одна из стандартных библиотек <iostream> (выводящая в консоли предложения и вводящая через нее же)</p>
+			
+			<h2 class = "looper"> while(условие){ ... } </h2>
+			<p> цикл идущий пока 'условие' не станет ложным</p>
+			
+			<h2 class = "looper"> do { ... } while(условие) </h2>
+			<p> цикл идущий пока 'условие' не станет ложным, но проверка после действия</p>
+			
+			<h2 class = "looper"> for(от;условие;шаг){ ... } </h2>
+			<p> цикл идущий 'условие' раз начиная с 'от' и с шагом в 'шаг'</p>
+			
+			
+			<h2 class = "looper"> switch(переменная){case № : ... ;} </h2>
+			<p> "Переключатель" нужен для выбора с помощью 'переменной' действия case №:</p>
+			
+			<h1> Определение переменных </h1>
+			<h2 class = "incl"> Определение простых переменных </h2>
+			<p>тип name = 'Поддерживаемое типом число';</p>
+			
+			<h2 class = "incl"> Определение массивов </h2>
+			<p>Строение, при определении массивов: int(тип) name[i][j] = {'Поддерживаемое типом число'},{'Поддерживаемое типом число'};, обычно их определяют через 'for'</p>
+			
+			<h1><br>Показательную задачку можно увидеть в самом низу страницы!<br><br></h2>
+			
+			<h1>Часто использующиеся библиотеки: </h1>
+			
+			<h2 class = "incl"> iostream: </h2>
+			
+			<h3 class = "synt">cout</h3>
+			<p> - Сиснтаксис вывода </p>
+				
+			
+			<h3 class = "synt">cin</h3>
+			<p> - Сиснтаксис ввода </p>
+			
+			
+			<h2  class = "incl"> math: </h2>
+			
+			<h2 class = "incl"> *****************Округление*************** </h2>
+			
+			<h3 class = "synt"> round </h3>
+			<p>Округляет число по правилам арифметики, то есть round(1.5) == 2, round(-1.5) == -2</p>
+			
+			<h3 class = "synt"> floot </h3>
+			<p>Округляет число вниз (“пол”), при этом floor(1.5) == 1, floor(-1.5) == -2</p>
+			
+			<h3 class = "synt"> ceil </h3>
+			<p>Округляет число вверх (“потолок”), при этом ceil(1.5) == 2, ceil(-1.5) == -1</p>
+			
+			<h3 class = "synt"> trunc </h3>
+			<p>Округление в сторону нуля (отбрасывание дробной части), при этом trunc(1.5) == 1, trunc(-1.5) == -1</p>
+			
+			<h3 class = "synt"> fabs </h3>
+			<p>Модуль (абсолютная величина)</p>
+			
+			<h2 class = "incl"> *********Корни, степени, логарифмы******** </h2>
+			
+			<h3 class = "synt"> sqrt </h3>
+			<p>Квадратный корень. Использование: sqrt(x)</p>
+			
+			<h3 class = "synt"> cbrt </h3>
+			<p>Кубический корень. Использование: cbrt(x)</p>
+			
+			<h3 class = "synt"> pow </h3>
+			<p>Возведение в степень, возвращает ab. Использование: pow(a,b)</p>
+			
+			<h3 class = "synt"> exp	 </h3>
+			<p>Экспонента, возвращает ex. Использование: exp(x)</p>
+			
+			<h3 class = "synt"> log </h3>
+			<p>Натуральный логарифм</p>
+			
+			<h3 class = "synt"> log10 </h3>
+			<p>Десятичный логарифм</p>
+			
+			<h2 class = "incl"> ***************Тригонометрия************** </h2>
+			
+			<h3 class = "synt"> sin/asin	 </h3>
+			<p>	арк/Синус угла, задаваемого в радианах</p>
+			
+			<h3 class = "synt"> cos/acos </h3>
+			<p> арк/Косинус угла, задаваемого в радианах</p>
+			
+			<h3 class = "synt"> tan/atan </h3>
+			<p>	арк/Тангенс угла, задаваемого в радианах</p>
+			
+			
+			<a> Стандартные типы, их диапазон и размер <br> <img src = Res\Cucsusiuifdldb.png></a>
+			
+		</div>
+		
+		
+		<a><img src = Res\c-cheatsheat.png class = "Img1"></a>
+	
+		<div class = "underIm1">
+			<ul>
+				<li> <a href = base_C++.html> Продвинутая шпаргалка: </a>
+					<ul>
+						<li> <a><img src = Res\B-Cheatsheat.png class = "Img2"></a> </li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<iframe class = "ifr1" src="https://godbolt.org/e#z:OYLghAFBqd5QCxAYwPYBMCmBRdBLAF1QCcAaPECAMzwBtMA7AQwFtMQByARg9KtQYEAysib0QXACx8BBAKoBnTAAUAHpwAMvAFYTStJg1DIApACYAQuYukl9ZATwDKjdAGFUtAK4sGIM6SuADJ4DJgAcj4ARpjEElykAA6oCoRODB7evv5JKWkCIWGRLDFxXAl2mA7pQgRMxASZPn4BldUCtfUEhRHRsfG2dQ1N2a1D3aG9Jf3lAJS2qF7EyOwcAPRrANQmACIaJgCcAGK7XCYAHPt7Jhbnu/sWbvc3AKynFxrb1xYAgs8W2H%2Bkn%2Bn3%2BOxBmyelmsADoTBo/mYAMyhZDeLDbJFuJwKAjETCsExI7CbDb/M7fO7fCkPKyU/6AnZnc5mf5vb5/b77BHmFEMNFeDFEty44ihYBEwE8hFeVJGTbMNgKRJMFabXHoIkWUlrf5U5k0m4nb6M2nvc5Pb4AdgZ/1ZXLBtu%2BLy%2BzKuDyuBvNVIe%2Bo%2BbMd9OdMK%2BD3tXudoZuppunI9geZNqDYZBAaZF3DFwpzKOUYs4K5mIsYDA8L%2BCNCBE2LCYoQgsxMVqsCM2rfVePFmyYWo2UZ%2BhoB/yTD2BDu%2BBd9bLzxoe7LdaYeltngYeE%2Bj/wOZbbm2QoUxgOJXZ7uuuB3tKZNQNdGYXsfN2ZvXJDYA4kslL7zMYsD8uqfT503Z0VxuH1XjzH5rxZW9fnvc1M3OJE8zXCxQW%2Bc8bnQwdvmBFs2zQLwq2FYVtjMMwAAlMFoWhUBI1ksWIphMSeLFNlcWgmOI8wzBLHjS1IrUdTzeC6QvB4v0kSDMPZB5OQjZlMI0UhNhfIisRfABaJ0Hh/d0bk9C5AOXcc9Snf4ILg6DZKzCz/0Q4CUKE80RIwrSbhwv4rR2Dh5loTgXl4PwOC0UhUE4KErEsdVFmWTASKRHhSAITRvPmABrEAXkU3yOEkALkpCzheAUEBFKSoLvNIOBYCQTBVCqAiSHISh6mABRlEMSihAQVAAHdAoStAWESOgmEcAR2rCWgut6wLgsG4b6DiVrmESBRuoIUh5roWJwlYVZeC2xaAHkCOmvr8tqqofmIVrCsCOrkFqfBAs2Hr0F4fhBBEMR2C4c4ZEERQVHUcrSF0BIDCMFBrGsfQ8CiYrIHmVBEjGhhio4dSNSJHZTGhSwzGChRopWPQNVCCbOu687QbxTB2EUnriCYRJOB4Hy/Ly0HQo4bAHoa4hNlUc4ADZ1JFiTgGQZBNggPEvAYVLZll8LYc2XBCBIOKuFmXgyq0WY0oyrLOFy0hZt4HmipKxLksN/RODMLngqt23yvtgA3WJUmcSQgA%3D"></iframe>
+		
+		</div>
+	</Centr>
+	
+	<Buttom>
+	<div class = "buttom">
+		<p>
+			&copy; 2023 Фурманов И.Д.
+		</p>
+	</div>
+	</Buttom>
+	
+</body>
+
+</html>
